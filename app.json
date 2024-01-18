@@ -1,0 +1,83 @@
+{
+    "name": "PubliceMusicBot",
+    "description": "A Telegram Music Player Bot, written in Python with Pyrogram and Py-Tgcalls.",
+    "logo": "https://telegra.ph/file/cf7b5e9c7e1afb8e7f768.jpg",
+    "keywords": [
+    "python3",
+    "telegram",
+    "bot",
+    "PubliceMusicBot",
+    "MusicBot",
+    "telegram-bot",
+    "pyrogram"
+    ],
+    "env": {
+      "API_ID": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "6435225",
+        "required": true
+      },
+      "API_HASH": {
+        "description": "Get this value from https://my.telegram.org",
+        "value": "4e984ea35f854762dcde906dce426c2d",
+        "required": true
+      },
+      "BOT_TOKEN": {
+        "description": "A Bot's token from Botfather",
+        "value": "",
+        "required": true
+      },
+      "MONGO_DB_URI": {
+        "description": "Get a mongodb url from https://cloud.mongodb.com.",
+        "value": "",
+        "required": true
+      },
+      "OWNER_ID": {
+        "description": "The user id of user whom you would like to add as OWNER.",
+        "value": "5360305806",
+        "required": true
+      },
+      "STRING_SESSION": {
+        "description": "A Pyrogram v1 String Session from @Sessoin_String_gen_BOT on Telegram.",
+        "value": "",
+        "required": true
+      },
+      "HEROKU_API_KEY": {
+        "description": "Your Heroku account's API key",
+        "value": "",
+        "required": false
+      },
+      "HEROKU_APP_NAME": {
+        "description": "Your heroku app name",
+        "value": "",
+        "required": false
+      },
+        "GBANLOGS": {
+        "description": "Add Here Your Gbans Logs Channel Id ex : -100",
+        "value": "",
+        "required": true
+      },
+        "PUBLICELOGS": {
+        "description": "Chat id of a group for Bot Added Messege/Leaved Messege U can Add Your Support Group id Aslo ex : -100",
+        "value": "",
+        "required": true
+      },
+      "LOGGER_ID": {
+        "description": "Your Log Group ID, add your bot and promote as an admin with full rights!.. ex : -100",
+        "value": "",
+        "required": true
+      }
+    },
+    "buildpacks": [
+          {
+              "url": "heroku/python"
+          },
+          {
+              "url": "heroku/nodejs"
+          },
+          {
+              "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+          }
+      ],
+      "stack": "container"
+  }
