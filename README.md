@@ -3,10 +3,6 @@
 </h2>
 
 <p align="center">
-  <img src="https://telegra.ph/file/cf7b5e9c7e1afb8e7f768.jpg">
-</p>
-
-<p align="center">
 <a href="https://github.com/AbhiModszYT/PubliceMusicBot/stargazers"><img src="https://img.shields.io/github/stars/AbhiModszYT/PubliceMusicBot?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars" /></a>
 <a href="https://github.com/AbhiModszYT/PubliceMusicBot/network/members"> <img src="https://img.shields.io/github/forks/AbhiModszYT/PubliceMusicBot?color=black&logo=github&logoColor=black&style=for-the-badge" /></a>
 <a href="https://github.com/AbhiModszYT/PubliceMusicBot/blob/main/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License" /> </a>
