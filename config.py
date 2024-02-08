@@ -13,8 +13,8 @@ BOT_TOKEN = getenv("BOT_TOKEN") # Get your token from @BotFather on Telegram.
 MONGO_DB_URI = getenv("MONGO_DB_URI", None) # Get your mongo url from cloud.mongodb.com
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", "9999"))
 LOGGER_ID = int(getenv("LOGGER_ID", "-1001840241140"))  # Chat id of a group for logging bot's activities/ Music Play Logs
-PUBLICELOGS = int(getenv("PUBLICELOGS", "-1001840241140")) # Chat id of a group for Bot Added Messege/Leaved Messege U can Add Your Support Group id Aslo
-GBANLOGS = int(getenv("GBANLOGS", "-1001840241140")) #Add Here Your Gbans Logs Channel Id 
+PUBLICELOGS = int(getenv("PUBLICELOGS", "-1001841879487")) # Chat id of a group for Bot Added Messege/Leaved Messege U can Add Your Support Group id Aslo
+GBANLOGS = int(getenv("GBANLOGS", "-1001841879487")) #Add Here Your Gbans Logs Channel Id 
 OWNER_ID = int(getenv("OWNER_ID", "5360305806")) # Get this value from @Sophia_x_MusicBot on Telegram by /id
 ## Fill these variables if you're deploying on heroku.
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")# Your heroku app name
