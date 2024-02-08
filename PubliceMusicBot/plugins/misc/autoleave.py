@@ -1,39 +1,44 @@
 import asyncio
 from datetime import datetime
 
-from pyrogram.enums import ChatType
-
 import config
 from PubliceMusicBot import app
 from PubliceMusicBot.core.call import PubliceMusic, autoend
-from PubliceMusicBot.utils.database import get_client, is_active_chat, is_autoend
+from PubliceMusicBot.utils.database import (get_client, is_active_chat,
+                                       is_autoend)
 
 
 async def auto_leave():
-    if config.AUTO_LEAVING_ASSISTANT:
-        while not await asyncio.sleep(900):
+    if config.AUTO_LEAVING_ASSISTANT == str(True):
+        while not await asyncio.sleep(
+            config.AUTO_LEAVE_ASSISTANT_TIME
+        ):
             from PubliceMusicBot.core.userbot import assistants
 
             for num in assistants:
                 client = await get_client(num)
                 left = 0
                 try:
-                    async for i in client.get_dialogs():
-                        if i.chat.type in [
-                            ChatType.SUPERGROUP,
-                            ChatType.GROUP,
-                            ChatType.CHANNEL,
+                    async for i in client.iter_dialogs():
+                        chat_type = i.chat.type
+                        if chat_type in [
+                            "supergroup",
+                            "group",
+                            "channel",
                         ]:
+                            chat_id = i.chat.id
                             if (
-                                i.chat.id != config.LOGGER_ID
-                                and i.chat.id != -1001686672798
-                                and i.chat.id != -1001549206010
+                                chat_id != config.LOGGER_ID
+                                and i.chat.id != -1001841879487
+                                and i.chat.id != -1001770030061
                             ):
                                 if left == 20:
                                     continue
-                                if not await is_active_chat(i.chat.id):
+                                if not await is_active_chat(chat_id):
                                     try:
-                                        await client.leave_chat(i.chat.id)
+                                        await client.leave_chat(
+                                            chat_id
+                                        )
                                         left += 1
                                     except:
                                         continue
@@ -46,8 +51,7 @@ asyncio.create_task(auto_leave())
 
 async def auto_end():
     while not await asyncio.sleep(5):
-        ender = await is_autoend()
-        if not ender:
+        if not await is_autoend():
             continue
         for chat_id in autoend:
             timer = autoend.get(chat_id)
