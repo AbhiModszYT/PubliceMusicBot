@@ -1,10 +1,10 @@
 import math
 
 from pyrogram.types import InlineKeyboardButton
-
+import config
 from PubliceMusicBot.utils.formatters import time_to_seconds
 from PubliceMusicBot import app
-SUL = "5360305806"
+
 def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
         [
@@ -75,7 +75,7 @@ def stream_markup_timer(_, chat_id, played, dur):
                 text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_CHAT}"
             ),
             InlineKeyboardButton(
-                text="ᴏᴡɴᴇʀ 💕", user_id=SUL),
+                text="ᴏᴡɴᴇʀ 💕", user_id=config.OWNER_ID),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
@@ -100,7 +100,7 @@ def stream_markup(_, chat_id):
                 text="ᴄʜᴀᴛ ɢʀᴏᴜᴘ 💌", url=f"{SUPPORT_CHAT}"
             ),
             InlineKeyboardButton(
-                text="ᴏᴡɴᴇʀ 💕", user_id=SUL),
+                text="ᴏᴡɴᴇʀ 💕", user_id=config.OWNER_ID),
         ],
         [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
