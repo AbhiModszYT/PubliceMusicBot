@@ -54,17 +54,17 @@
       },
         "GBANLOGS": {
         "description": "Add Here Your Gbans Logs Channel Id ex : -100",
-        "value": "",
+        "value": "-1001841879487",
         "required": true
       },
         "PUBLICELOGS": {
         "description": "Chat id of a group for Bot Added Messege/Leaved Messege U can Add Your Support Group id Aslo ex : -100",
-        "value": "",
+        "value": "-1001841879487",
         "required": true
       },
       "LOGGER_ID": {
         "description": "Your Log Group ID, add your bot and promote as an admin with full rights!.. ex : -100",
-        "value": "",
+        "value": "-1001840241140",
         "required": true
       }
     },
