@@ -15,12 +15,12 @@ from PubliceMusicBot.utils.database import (
 )
 from PubliceMusicBot.utils.decorators.language import language
 from PubliceMusicBot.utils.formatters import alpha_to_int
-from config import adminlist
+from config import adminlist, OWNER_ID
 
 IS_BROADCASTING = False
 
 
-@app.on_message(filters.command(["broadcast","gcast"]) & SUDOERS)
+@app.on_message(filters.command(["broadcast","gcast"]) & filters.user(OWNER_ID))
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
