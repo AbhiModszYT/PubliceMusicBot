@@ -1,6 +1,7 @@
 import math
 from pyrogram.types import InlineKeyboardButton
 import config
+from config import OWNER_USERNAME, SUPPORT_CHAT
 from PubliceMusicBot.utils.formatters import time_to_seconds
 from PubliceMusicBot import app
 
