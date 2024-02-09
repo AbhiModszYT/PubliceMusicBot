@@ -3,9 +3,12 @@ from typing import List
 
 import yaml
 
+commands = {}
 languages = {}
 languages_present = {}
 
+def get_command(value: str) -> List:
+    return commands["command"][value]
 
 def get_string(lang: str):
     return languages[lang]
