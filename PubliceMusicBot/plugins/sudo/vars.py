@@ -7,7 +7,7 @@ from PubliceMusicBot import app
 from PubliceMusicBot.misc import SUDOERS
 from PubliceMusicBot.utils.formatters import convert_bytes
 
-@app.on_message(filters.command(["vars","var","config"]) & SUDOERS)
+@app.on_message(filters.command(["v","var","config"]) & SUDOERS)
 async def varsFunc(client, message):
     mystic = await message.reply_text(
         "Please wait.. Getting your config"
