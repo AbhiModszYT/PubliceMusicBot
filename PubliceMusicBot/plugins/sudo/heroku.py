@@ -126,22 +126,22 @@ async def set_var(client, message, _):
     value = message.text.split(None, 2)[2].strip()
     if await is_heroku():
         if HAPP is None:
-            return await message.reply_text(_["heroku_1"])
+            return await message.reply_text("Please make sure your Heroku API Key, Your App name are configured correctly in the heroku")
         heroku_config = HAPP.config()
         if to_set in heroku_config:
-            await message.reply_text(_["heroku_9"].format(to_set))
+            await message.reply_text("{0} has been updated successfully".format(to_set))
         else:
-            await message.reply_text(_["heroku_10"].format(to_set))
+            await message.reply_text("{0} has been added successfully".format(to_set))
         heroku_config[to_set] = value
     else:
         path = dotenv.find_dotenv()
         if not path:
-            return await message.reply_text(_["heroku_5"])
+            return await message.reply_text(".env file not found.")
         dotenv.set_key(path, to_set, value)
         if dotenv.get_key(path, to_set):
-            await message.reply_text(_["heroku_9"].format(to_set))
+            await message.reply_text("{0} has been updated successfully".format(to_set))
         else:
-            await message.reply_text(_["heroku_10"].format(to_set))
+            await message.reply_text("{0} has been added successfully".format(to_set))
         os.system(f"kill -9 {os.getpid()} && bash start")
 
 @app.on_message(filters.command(["use","usage","heroku"]) & SUDOERS)
@@ -150,10 +150,10 @@ async def usage_dynos(client, message, _):
     ### Credits CatUserbot
     if await is_heroku():
         if HAPP is None:
-            return await message.reply_text(_["heroku_1"])
+            return await message.reply_text("Please make sure your Heroku API Key, Your App name are configured correctly in the heroku")
     else:
-        return await message.reply_text(_["heroku_11"])
-    dyno = await message.reply_text(_["heroku_12"])
+        return await message.reply_text("Only for Heroku Apps")
+    dyno = await message.reply_text("Checking Heroku Usage. Please Wait")
     Heroku = heroku3.from_key(config.HEROKU_API_KEY)
     account_id = Heroku.account().id
     useragent = (
@@ -205,14 +205,14 @@ Total Left: <code>{hours}</code>h  <code>{minutes}</code>m  [<code>{percentage}<
 async def update_(client, message, _):
     if await is_heroku():
         if HAPP is None:
-            return await message.reply_text(_["heroku_1"])
-    response = await message.reply_text(_["heroku_13"])
+            return await message.reply_text("Please make sure your Heroku API Key, Your App name are configured correctly in the heroku")
+    response = await message.reply_text("Checking for available updates...")
     try:
         repo = Repo()
     except GitCommandError:
-        return await response.edit(_["heroku_14"])
+        return await response.edit("Git Command Error")
     except InvalidGitRepositoryError:
-        return await response.edit(_["heroku_15"])
+        return await response.edit("Invalid Git Repsitory")
     to_exc = f"git fetch origin {config.UPSTREAM_BRANCH} &> /dev/null"
     os.system(to_exc)
     await asyncio.sleep(7)
