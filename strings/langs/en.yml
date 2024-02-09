@@ -177,10 +177,10 @@ queue_8 : "<b>{0} ᴘʟᴀʏᴇʀ</b>\n\n🎄 <b>sᴛʀᴇᴀᴍɪɴɢ :</b> {1}
 stream_1 : "➲ <b>Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |</b>\n\n<b>‣ Tɪᴛʟᴇ :</b> <a href={0}>{1}</a>\n<b>‣ Dᴜʀᴀᴛɪᴏɴ :</b> {2} ᴍɪɴᴜᴛᴇs\n<b>‣ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {3}"
 stream_2 : "➲ <b>Sᴛᴀʀᴛᴇᴅ Sᴛʀᴇᴀᴍɪɴɢ |</b>\n\n<b>‣ Sᴛʀᴇᴀᴍ ᴛʏᴘᴇ :</b> ʟɪᴠᴇ sᴛʀᴇᴀᴍ [ᴜʀʟ]\n<b>‣ Rᴇǫᴜᴇsᴛᴇᴅ ʙʏ :</b> {0}"
 
-
-CLOSE_BUTTON  : "🗑ᴄʟᴏsᴇ🗑"
-BACK_BUTTON : "🔙ʙᴀᴄᴋ🔙"
-
+CLOSE_BUTTON  : "🗑 Close"
+CLOSEMENU_BUTTON  : "🗑 Close Menu"
+BACK_BUTTON : "⬅ Back"
+UNBAN_BUTTON : "🗑 Unban Assistant"
 
 S_B_1 : "➕ Aᴅᴅ ᴍᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ"
 S_B_2 : "💌 ᴄʜᴀᴛ ɢʀᴏᴜᴘ"
@@ -327,3 +327,33 @@ song_11 : "ᴜᴘʟᴏᴀᴅɪɴɢ sᴛᴀʀᴛᴇᴅ ʙᴀʙʏ\n\nᴘʟᴇᴀs�
 SG_B_1 : "• ᴄʟɪᴄᴋ ʜᴇʀᴇ •"
 SG_B_2 : "🎧 ᴀᴜᴅɪᴏ 🎧"
 SG_B_3 : "🎥 ᴠɪᴅᴇᴏ 🎥"
+SG_B_4 : "🚀 Checkout Lyrics Now"
+#videomode
+vidmode_1 : "Usage:\n/videomode [download|m3u8]"
+vidmode_2 : "Video Play Mode set as downloader. Bot will be downloading tracks now."
+vidmode_3 : "Video Play Mode set as m3u8. Bot will be play tracks live now."
+
+
+#Heroku
+heroku_1 : "Please make sure your Heroku API Key, Your App name are configured correctly in the heroku"
+heroku_2 : "You can only get logs of Heroku Apps"
+heroku_3 : "Usage:\n/get_var [Var Name]"
+heroku_4 : "Unable to find any such var."
+heroku_5 : ".env file not found."
+heroku_6 : "Usage:\n/del_var [Var Name]"
+heroku_7 : "{0} Deleted."
+heroku_8 : "Usage:\n/set_var [Var Name] [Var Value]"
+heroku_9 : "{0} has been updated successfully"
+heroku_10 : "{0} has been added successfully"
+heroku_11 : "Only for Heroku Apps"
+heroku_12 : "Checking Heroku Usage. Please Wait"
+heroku_13 : "Checking for available updates..."
+heroku_14 : "Git Command Error"
+heroku_15 : "Invalid Git Repsitory"
+
+#Lyrics
+lyrics_1 : "Usage:\n\n/lyrics [ Music Name]"
+lyrics_2 : "Searching Lyrics"
+lyrics_3 : "❌ Failed to fetch lyrics😭.\n\n💡**Tried Searching For:** {0}"
+lyrics_4 : "Click on the button below and get searched lyrics to avoid long spam types lyrics search."
+
