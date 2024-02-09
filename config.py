@@ -72,6 +72,11 @@ AMBOT = [
 ]
 
 BANNED_USERS = filters.user()
+YTDOWNLOADER = 1
+clean = {}
+lyrical = {}
+LOG_FILE_NAME = "logs.txt"
+LOG = 2
 adminlist = {}
 lyrical = {}
 votemode = {}
