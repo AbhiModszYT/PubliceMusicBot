@@ -19,13 +19,16 @@ async def varsFunc(client, message):
     tg_vid = convert_bytes(config.TG_VIDEO_FILESIZE_LIMIT)
     api = config.API_ID
     hash = config.API_HASH
-    bot = config.BOT_TOKEN
     mongo = config.MONGO_DB_URI
     DURATIONLIMIT = config.DURATION_LIMIT
     log = config.LOGGER_ID
     owner = config.OWNER_USERNAME
     auto_leave = config.AUTO_LEAVE_ASSISTANT_TIME
-    if not config.STRING_SESSION:
+    if not config.BOT_TOKEN:
+        bot = "No"
+    else:
+        bot = "Yes"
+    if not config.STRING1:
         sesson = "No"
     else:
         sesson = "Yes"
