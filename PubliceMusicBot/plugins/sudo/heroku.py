@@ -243,7 +243,7 @@ async def update_(client, message, _):
     _update_response_ = "<b>A new update is available for the Bot!</b>\n\n➣ Pushing Updates Now</code>\n\n<u>Updates:</u>\n\n"
     _final_updates_ = _update_response_ + updates
     if len(_final_updates_) > 4096:
-        url = await Yukkibin(updates)
+        url = await PubliceMusicBin(updates)
         nrs = await response.edit(
             f"<b>A new update is available for the Bot!</b>\n\n➣ Pushing Updates Now</code>\n\n<u>Updates:</u>\n\n<a href={url}>Click Here to checkout Updates </a>)"
         )
