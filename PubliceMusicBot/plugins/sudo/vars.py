@@ -24,8 +24,11 @@ async def varsFunc(client, message):
     DURATIONLIMIT = config.DURATION_LIMIT
     log = config.LOGGER_ID
     owner = config.OWNER_USERNAME
-    sesson = config.STRING_SESSION
     auto_leave = config.ASSISTANT_LEAVE_TIME
+    if not config.STRING_SESSION:
+        sesson = "No"
+    else:
+        sesson = "Yes"
     if config.AUTO_LEAVING_ASSISTANT == str(True):
         ass = "Yes"
     else:
