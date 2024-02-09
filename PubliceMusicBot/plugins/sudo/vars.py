@@ -3,7 +3,6 @@ import asyncio
 from pyrogram import filters
 
 import config
-from strings import get_command
 from PubliceMusicBot import app
 from PubliceMusicBot.misc import SUDOERS
 from PubliceMusicBot.utils.database.memorydatabase import get_video_limit
