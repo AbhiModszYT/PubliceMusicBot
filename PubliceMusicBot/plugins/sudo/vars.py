@@ -5,7 +5,7 @@ from pyrogram import filters
 import config
 from PubliceMusicBot import app
 from PubliceMusicBot.misc import SUDOERS
-from PubliceMusicBot.utils.database.memorydatabase import get_video_limit
+from PubliceMusicBot.utils.database import get_video_limit
 from PubliceMusicBot.utils.formatters import convert_bytes
 
 @app.on_message(filters.command(["vars","var","config"]) & SUDOERS)
