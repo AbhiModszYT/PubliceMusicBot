@@ -5,7 +5,6 @@ from pyrogram import filters
 import config
 from PubliceMusicBot import app
 from PubliceMusicBot.misc import SUDOERS
-from PubliceMusicBot.utils.database import get_video_limit
 from PubliceMusicBot.utils.formatters import convert_bytes
 
 @app.on_message(filters.command(["vars","var","config"]) & SUDOERS)
@@ -13,7 +12,6 @@ async def varsFunc(client, message):
     mystic = await message.reply_text(
         "Please wait.. Getting your config"
     )
-    v_limit = await get_video_limit()
     up_r = f"[Repo]({config.UPSTREAM_REPO})"
     up_b = config.UPSTREAM_BRANCH
     owners = config.OWNER_ID
@@ -53,7 +51,6 @@ API ID : {api}
 API HASH : {hash}
 BOT TOKEN : {bot}
 MONGO DB : {mongo}
-VIDEO_STREAM_LIMIT : {v_limit} chats
 Assis ID : {sesson}
 Play Limit : {play}
 OWNER USERNAME : @{owner}
