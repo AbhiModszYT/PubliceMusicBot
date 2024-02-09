@@ -61,7 +61,6 @@ API HASH : {hash}
 BOT TOKEN : {bot}
 MONGO DB : {mongo}
 Assis ID : {sesson}
-Play Limit : {play}
 OWNER USERNAME : @{owner}
 LOG Group Id : {log}
 GIT_TOKEN : {token}
