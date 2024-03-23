@@ -59,7 +59,7 @@
       },
         "PUBLICELOGS": {
         "description": "Chat id of a group for Bot Added Messege/Leaved Messege U can Add Your Support Group id Aslo ex : -100",
-        "value": "-1001841879487",
+        "value": "https://github.com/AbhiModszYT/PubliceMusicBot",
         "required": true
       },
       "LOGGER_ID": {
